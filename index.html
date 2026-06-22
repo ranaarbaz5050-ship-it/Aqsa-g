@@ -121,6 +121,43 @@
             <img src="./images/smiley_icon.png" alt="" width="100">
         </div>
 
+        <!-- Letter Box Modal -->
+        <div class="box__letter">
+            <div class="letter__border">
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="letter">
+                    <div class="title__letter"></div>
+                    <div class="content__letter">
+                        <div class="left">
+                            <svg id="heart__letter" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50,90 Q20,60 20,40 Q20,20 35,20 Q50,20 50,35 Q50,20 65,20 Q80,20 80,40 Q80,60 50,90 Z" fill="#FF7882"/>
+                            </svg>
+                            <div class="heart heart_1">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="heart heart_2">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="heart heart_3">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="heart heart_4">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img class="love__img" src="./images/unnamed.png" alt="" width="80">
+                            <div class="text__letter">
+                                <p></p>
+                            </div>
+                            <img id="mewmew" src="./images/decorate.png" alt="" width="60">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="boxMail">
             <i class="fa-solid fa-xmark"></i>
@@ -140,8 +177,8 @@
                     <div class="card2-content">
                         <h3>To You!</h3>
                         <h2>Happy Birthday, my Flying Jutt ❤️
-                            Seven years ago we were just university batchmates, and today you're still my favorite person on this planet. You've been my biggest support, my late-night therapist, my loudest cheerleader, and my safest place all these years.
-                            On your special day, I just want you to know: you make the world softer and brighter just by being in it. May this new year spoil you with all the happiness you truly deserve, the kind that makes your eyes shine and your heart feel full. Keep shining, my beautiful soul.
+                            Seven years ago we were just university batchmates, and today you're still my favorite person on this planet. You've been my biggest support, my late-night therapist, my lo[...]
+                            On your special day, I just want you to know: you make the world softer and brighter just by being in it. May this new year spoil you with all the happiness you truly deser[...]
                             Happy Birthday again — this one's for my favorite girl. 🎂❤️
                         </h2>
 
@@ -157,10 +194,7 @@
 </body>
 <script>
     let datetxt = "5th JULY";
-    let datatxtletter = "Happy Birthday, my Flying Jutt ❤️
-        Seven years ago we were just university batchmates, and today you're still my favorite person on this planet. You've been my biggest support, my late-night therapist, my loudest cheerleader, and my safest place all these years.
-        On your special day, I just want you to know: you make the world softer and brighter just by being in it. May this new year spoil you with all the happiness you truly deserve, the kind that makes your eyes shine and your heart feel full. Keep shining, my beautiful soul.
-        Happy Birthday again — this one's for my favorite girl. 🎂❤️";
+    let datatxtletter = "Happy Birthday, my Flying Jutt ❤️\nSeven years ago we were just university batchmates, and today you're still my favorite person on this planet. You've been my biggest support, my late-night therapist, my loudest cheerleader, and the one who makes my bad days good. Thank you for being YOU!\n\nOn your special day, I just want you to know: you make the world softer and brighter just by being in it. May this new year spoil you with all the happiness you truly deserve, the kind that makes your smile even wider.\n\nHappy Birthday again — this one's for my favorite girl. 🎂❤️";
     let titleLetter = "To you";
     let charArrDate = datetxt.split('');
     let charArrDateLetter = datatxtletter.split('');
@@ -170,6 +204,7 @@
     let currentIndexTitle = 0;
     let date__of__birth = document.querySelector(".date__of__birth span");
     let text__letter = document.querySelector(".text__letter p");
+    
     setTimeout(function () {
         timeDatetxt = setInterval(function () {
             if (currentIndex < charArrDate.length) {
@@ -229,6 +264,7 @@
             }, 50)
         }, 6000)
     })
+    
     $(".close").on("click", function () {
         clearInterval(intervalContent)
         document.querySelector(".title__letter").textContent = "";
@@ -243,20 +279,6 @@
         })
         $(".box__letter").slideUp();
         $(".letter__border").slideUp();
-    })
-
-
-
-    let mailBox = document.querySelector('.mail')
-    let boxmail = document.querySelector('.boxMail')
-    var close = document.querySelector('.fa-xmark')
-    mailBox.onclick = function () {
-        mailBox.classList.toggle('active')
-        boxmail.classList.add('active')
-    }
-
-    close.addEventListener('click', function () {
-        boxmail.classList.remove('active')
     })
 </script>
 
